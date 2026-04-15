@@ -290,7 +290,7 @@ export async function startEngineMcpServer(server: McpServer): Promise<void> {
  * Working directory is passed as the first command line argument.
  * Platform API credentials are read from environment variables.
  */
-async function main(): Promise<void> {
+export async function main(): Promise<void> {
     const workingDir = process.argv[2];
     if (!workingDir) {
         throw new Error("Usage: node mcp-server.js <working-directory>");
@@ -335,7 +335,7 @@ async function main(): Promise<void> {
 }
 
 // Run if executed directly (check filename to avoid firing when bundled into another entry)
-if (process.argv[1]?.endsWith("mcp-server.js")) {
+if (process.argv[1]?.endsWith("mcp-server.js") || process.argv[1]?.endsWith("mcp-server-entry.js")) {
     main().catch((error) => {
         log("FATAL", { error: String(error) });
         console.error("Failed to start MCP server:", error);
