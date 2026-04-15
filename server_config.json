@@ -1,0 +1,1 @@
+{"serverConfig": "{\"mcpServers\":{\"github-copilot-engine-sdk\":{\"command\":\"npx\",\"args\":[\"-y\",\"@iflow-mcp/github-copilot-engine-sdk\",\"/tmp/workspace\"],\"values\":{}}}}"}
