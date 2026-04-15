@@ -1,5 +1,3 @@
-#!/usr/bin/env node
-
 /**
  * MCP Server Entry Point
  * 
